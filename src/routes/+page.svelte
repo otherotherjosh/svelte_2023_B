@@ -4,4 +4,4 @@
 <li>fish</li>
 <li>bird</li>
 <img src="https://svg-files.pixelied.com/60f2e1cc-b0cf-4f69-aaa9-af726478499e/thumb-256px.png"/>
-<p><a href="https://online.op.ac.nz">Otago Polytechnic</a></p>
+<p><a href="https://online.op.ac.nz" target="_blank">Otago Polytechnic</a></p>
