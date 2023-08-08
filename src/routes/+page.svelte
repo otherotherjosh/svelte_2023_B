@@ -1,2 +1,15 @@
-<h1>welcome to the inn</h1>
-<h2>we hope you enjoy your stay</h2>
+<div class="main">
+    <h1>Main heading</h1>
+    <p>
+    	This is some informative content.
+    </p>
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+    </ul>
+    <div class="footer">
+    	Footer content
+    </div>
+</div>
