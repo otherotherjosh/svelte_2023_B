@@ -1,7 +1,29 @@
 body {
     margin: 0;
+    font-family: Arial;
+}
+
+div.main {
+    background-color: #146798;
 }
 
 h1 {
-    color: cornflowerblue;
+    color: white;
+    text-transform: uppercase;
+    font-size: 55px;
+}
+
+p {
+    background-color: hotpink;
+}
+
+ul, ol {
+    list-style: upper-roman;
+}
+
+div.footer {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 32px;
+    
 }

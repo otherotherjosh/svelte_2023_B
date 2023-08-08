@@ -1,1 +1,1 @@
-<p>Footer? I hardly know er</p>
+<footer>Footer? I hardly know er</footer>

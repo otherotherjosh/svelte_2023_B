@@ -3,12 +3,12 @@
     <p>
     	This is some informative content.
     </p>
-    <ul>
+    <ol>
       <li>One</li>
       <li>Two</li>
       <li>Three</li>
       <li>Four</li>
-    </ul>
+    </ol>
     <div class="footer">
     	Footer content
     </div>
