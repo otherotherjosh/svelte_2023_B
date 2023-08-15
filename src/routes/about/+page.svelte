@@ -1,10 +1,4 @@
-<div>
-  <div></div>
-  <div></div>
-  <div>
-    <div>Style this one</div>
-  </div>
-  <div>
-    <div>But don't style this one!</div>
-  </div>
+<div class="main">
+  <h1>About this garbage website</h1>
+  <h2>why do you want to know? im scared</h2>
 </div>

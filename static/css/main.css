@@ -5,84 +5,20 @@ body {
 
 div.main {
     background-color: #0EA7D1;
+    padding: 7px 10px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    text-align: center;
 }
 
 h1 {
-    color: white;
-    text-transform: uppercase;
     font-size: 55px;
 }
 
-h1:hover {
-    color: #D0F5FF;
-}
+h2 {
 
-p {
-}
-
-ol, ul {
-    font-size: 55px;
-    color: white;
-}
-
-li::after {
-    content: 'gay';
-}
-
-
-li:nth-of-type(7n+1) {
-    background-color: red;
-}
-
-li:nth-of-type(7n+2) {
-    background-color: orange;
-}
-
-li:nth-of-type(7n+3) {
-    background-color: yellow;
-}
-
-li:nth-of-type(7n+4) {
-    background-color: green;
-}
-
-li:nth-of-type(7n+5) {
-    background-color: blue;
-}
-
-li:nth-of-type(7n+6) {
-    background-color: indigo;
-}
-
-li:nth-of-type(7n+7) {
-    background-color: violet;
-}
-
-li:hover {
-    background-color: white;
-}
-
-ul, ol {
-    list-style: upper-roman;
-}
-
-div.footer {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 32px;
-}
-
-/*     here we see the homework code
-           in its natural habitat          */
-
-div div::first-letter {
-    font-size: 50px;
-}
-
-div div:nth-of-type(3) div {
-    background: green;
-}
-
-div div div:hover {
-    background: red;
 }
