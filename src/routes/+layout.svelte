@@ -1,6 +1,5 @@
 <script>
     import Header from '$lib/Header.svelte';
-    import Nav from '$lib/Nav.svelte';
     import Footer from '$lib/Footer.svelte';
 </script>
 
@@ -9,7 +8,6 @@
 </svelte:head>
 
 <Header/>
-<Nav/>
 
 <slot/>
 
