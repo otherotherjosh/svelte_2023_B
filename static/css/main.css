@@ -1,3 +1,8 @@
+@font-face {
+    font-family: October-Crow;
+    src: url("../font/October Crow.ttf");
+}
+
 header {
     /* position: fixed; */
     height: 70px;
@@ -28,10 +33,13 @@ h1, h2, h3 {
     color: white;
     margin: 0;
     text-align: center;
+    /* font-family: Helvetica, sans-serif; */
+    font-weight: 0;
 }
 
 h1 {
     font-size: 55px;
+    font-family: October-Crow;
 }
 
 h2 {
