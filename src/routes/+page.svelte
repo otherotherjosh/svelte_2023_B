@@ -1,3 +1,3 @@
 <div class="main">
-    <h1>Phasmophobia</h1>
+    <h1>Phasmophobier</h1>
 </div>
