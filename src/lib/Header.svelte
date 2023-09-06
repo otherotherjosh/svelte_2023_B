@@ -4,7 +4,10 @@
 
 <header>
     <div class="header left">
-        <Nav/>
+        <a href='/'>buger</a>
+    </div>
+    <div class="header center">
+        <h1>Phasmophobier</h1>
     </div>
     <div class="header right">
         this is the right side of the header

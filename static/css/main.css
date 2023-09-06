@@ -1,23 +1,32 @@
 @font-face {
     font-family: October-Crow;
     src: url("../font/October Crow.ttf");
-    font-weight: normal;
-    font-style: normal;
 }
 
 header {
     /* position: fixed; */
-    height: 70px;
+    height: 100px;
     width: 100%;
     display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
 }
 
-.header.left {
-    align-self: flex-start;
+.header {
+    margin: auto;
 }
 
-header .right{
-    align-self: flex-end;
+.left {
+    justify-self: flex-start;
+}
+
+.center {
+    justify-self: center;
+}
+
+.right{
+    justify-self: flex-end;
 }
 
 body {
@@ -32,7 +41,6 @@ div.main {
 
 h1, h2, h3 {
     text-transform: uppercase;
-    color: white;
     margin: 0;
     text-align: center;
     /* font-family: Helvetica, sans-serif; */
