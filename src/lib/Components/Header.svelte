@@ -1,15 +1,13 @@
-<script>
-    import Nav from '$lib/Nav.svelte';
-</script>
-
 <header>
-    <div class="header left">
-        <a href='/'>buger</a>
-    </div>
-    <div class="header center">
-        <h1>Phasmophobia</h1>
-    </div>
-    <div class="header right">
-        this is the right side of the header
+    <div class="headerWrap">
+        <div class="headerLeft">
+            <a href='/'>buger</a>
+        </div>
+        <div class="headerCenter">
+            <h1>Phasmophobia</h1>
+        </div>
+        <div class="headerRight">
+            this is the right side of the header
+        </div>
     </div>
 </header>

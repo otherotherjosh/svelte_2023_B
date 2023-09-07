@@ -6,29 +6,32 @@
 header {
     /* position: fixed; */
     height: 100px;
-    width: 100%;
+    background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.headerWrap {
+    width: 75%;
+    height: inherit;
+    display: grid;
+    grid-template-columns: 100px  1fr 100px;
     color: white;
-    background-color: black;
 }
 
-/* 
-.header {
+.headerLeft {
+    background-color: gray;
+    height: 100%;
 }
 
-.left {
-    justify-self: flex-start;
+.headerCenter {
+    overflow: -moz-hidden-unscrollable;
 }
 
-.center {
-    justify-self: center;
+.headerRight{
+ background-color: gray;
+ 
 }
-
-.right{
-    justify-self: flex-end;
-} */
 
 body {
     margin: 0;
@@ -44,11 +47,10 @@ h1, h2, h3 {
     text-transform: uppercase;
     margin: 0;
     text-align: center;
-    /* font-family: Helvetica, sans-serif; */
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 200px;
     font-family: October-Crow;
     font-weight: lighter;
 }
