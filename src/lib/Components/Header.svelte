@@ -4,7 +4,7 @@
             <a href='/'>buger</a>
         </div>
         <div class="headerCenter">
-            <h1>Phasmophobia</h1>
+            <h1>Phasmeowphobia</h1>
         </div>
         <div class="headerRight">
             this is the right side of the header
