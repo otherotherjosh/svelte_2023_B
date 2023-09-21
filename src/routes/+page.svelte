@@ -13,7 +13,6 @@
 
 <style>
     .gallery{
-        width:100%;
         display: grid;
         grid-template: repeat(1fr, 3) / repeat(100px, 3);
     }
@@ -25,7 +24,6 @@
 
 <div class="gallery">
     {#each cats as cat}
-        <div style="background-image:url({cat.urls.regular})"></div>
+        <img src={cat.urls.regular} alt="cat"/>
     {/each}
 </div>
-
