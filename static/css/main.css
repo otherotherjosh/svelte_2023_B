@@ -20,20 +20,28 @@ header {
 
 .headerLeft {
     background-color: rgb(33, 48, 71);
-    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .headerCenter {
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    font-size: 111px;
+    font-family: October-Crow;
+    font-weight: lighter;
 }
 
 .headerRight{
     background-color: rgb(65, 29, 29);
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 
 }
@@ -41,6 +49,8 @@ header {
 body {
     margin: 0;
     font-family: Arial;
+    color: darkblue;
+    height: 100vh;
 }
 
 div.main {
@@ -55,9 +65,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 100px;
-    font-family: October-Crow;
-    font-weight: lighter;
+    
 }
 
 h2 {
