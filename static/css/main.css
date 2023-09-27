@@ -14,7 +14,7 @@ header {
     width: 75%;
     height: inherit;
     display: grid;
-    grid-template-columns: 100px  1fr 100px;
+    grid-template-columns: repeat(3, 1fr);
     color: white;
 }
 
@@ -38,12 +38,16 @@ header {
     font-weight: lighter;
 }
 
-.headerRight{
+.headerRight {
     background-color: rgb(65, 29, 29);
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
+}
+
+footer {
+    background-color: black;
 }
 
 body {
@@ -64,10 +68,13 @@ h1, h2, h3 {
     text-align: center;
 }
 
-h1 {
-    
-}
-
-h2 {
-
+.imgBackground {
+    z-index: -999;
+    position:absolute;
+    width: 100%;
+    height:100vh;
+    background-image: url("https://oyster.ignimgs.com/mediawiki/apis.ign.com/phasmophobia/e/e2/Willow_Street_House_2.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

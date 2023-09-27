@@ -7,7 +7,7 @@
             <div class="title">Phasmeowphobia</div>
         </div>
         <div class="headerRight">
-            this is the right side of the header
+            icons
         </div>
     </div>
 </header>
