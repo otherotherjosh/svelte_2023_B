@@ -4,7 +4,6 @@
 }
 
 header {
-    /* position: fixed; */
     height: 100px;
     background-color: black;
     display: flex;
@@ -20,17 +19,23 @@ header {
 }
 
 .headerLeft {
-    background-color: gray;
+    background-color: rgb(33, 48, 71);
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .headerCenter {
-    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
 }
 
 .headerRight{
- background-color: gray;
- 
+    background-color: rgb(65, 29, 29);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
 
 body {
@@ -50,7 +55,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 200px;
+    font-size: 100px;
     font-family: October-Crow;
     font-weight: lighter;
 }
