@@ -33,7 +33,7 @@ header {
 
 .title {
     position: absolute;
-    font-size: 111px;
+    font-size: 6.66vw;
     font-family: October-Crow;
     font-weight: lighter;
 }
@@ -63,9 +63,17 @@ div.main {
 }
 
 h1, h2, h3 {
+    display: inline;
     text-transform: uppercase;
+    font-family: 'Lilita One', cursive;
     margin: 0;
     text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 20vw;
+    /* letter-spacing: -1.5vw; */
 }
 
 .imgBackground {
