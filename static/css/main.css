@@ -41,7 +41,7 @@ header {
 }
 
 .headerLeft {
-    background-color: rgb(33, 48, 71);
+    /* background-color: rgb(33, 48, 71); */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -61,7 +61,7 @@ header {
 }
 
 .headerRight {
-    background-color: rgb(65, 29, 29);
+    /* background-color: rgb(65, 29, 29); */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -79,7 +79,7 @@ footer {
 body {
     margin: 0;
     font-family: Arial;
-    color: darkblue;
+    /* color: darkblue; */
     height: 100vh;
 }
 
@@ -93,7 +93,7 @@ body {
     background-image: url("../img/noise.gif");
     background-repeat: repeat;
     background-size:64px;
-    opacity: 0.04;
+    opacity: 0.05;
     position:absolute;
     height:inherit;
     width:inherit;
@@ -107,4 +107,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
+}
+
+video {
+    width:100%;
 }

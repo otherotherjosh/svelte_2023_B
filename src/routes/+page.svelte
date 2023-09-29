@@ -1,6 +1,10 @@
 
 <div class="hero">
     <div class="noise"></div>
-    <div class="imgBackground" style="background-image:url(https://oyster.ignimgs.com/mediawiki/apis.ign.com/phasmophobia/e/e2/Willow_Street_House_2.JPG);"></div>
+    <div class="imgBackground">
+        <video autoplay muted loop>
+            <source src="/img/rain cat demo 1.mp4" type="video/mp4">
+        </video>
+    </div>
     <h1>meow.</h1>
 </div>
