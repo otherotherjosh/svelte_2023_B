@@ -115,11 +115,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: grow;
 }
 
 video {
-    /* height: inherit; */
-    width: 100%;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
 }
 
 @media (max-width:850px) {
