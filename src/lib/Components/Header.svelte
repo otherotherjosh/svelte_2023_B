@@ -4,7 +4,7 @@
             <a href='/'>buger</a>
         </div>
         <div class="headerCenter">
-            <div class="title">Phasmeowphobia</div>
+            <div class="title"></div>
         </div>
         <div class="headerRight">
             icons
