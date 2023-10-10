@@ -14,15 +14,15 @@ body {
 
 h1, h2, h3 {
     display: inline;
-    text-transform: uppercase;
-    font-family: 'Lilita One', cursive;
+    text-transform: lowercase;
+    font-family: 'Heebo', sans-serif;
     margin: 0;
     text-align: center;
 }
 
 h1 {
-    font-size: 20vw;
-    letter-spacing: -1vw;
+    font-size: 30px;
+    letter-spacing: -1px;
     color: #911;
 }
 
@@ -90,14 +90,16 @@ footer {
 .hero {
     height: calc(100vh - 200px);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .filmGrain {
     z-index: 3;
     background-image: url("../img/noise.gif");
     background-repeat: repeat;
-    background-size:64px;
-    opacity: 0.04;
+    opacity: 0.03;
     position:absolute;
     height:inherit;
     width:inherit;
@@ -115,7 +117,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: grow;
 }
 
 video {

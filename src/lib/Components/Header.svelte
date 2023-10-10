@@ -1,7 +1,9 @@
 <header>
     <div class="headerWrap">
         <div class="headerLeft">
-            <a href='/'>buger</a>
+            <a href='/'>
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
         <div class="headerCenter">
             <div class="title"></div>
