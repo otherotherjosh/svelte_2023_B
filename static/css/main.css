@@ -12,18 +12,15 @@ body {
     src: url("../font/October Crow.ttf");
 }
 
-h1, h2, h3 {
-    display: inline;
+.hero > p {
     text-transform: lowercase;
     font-family: 'Heebo', sans-serif;
-    margin: 0;
-    text-align: center;
-}
-
-h1 {
-    font-size: 30px;
+    font-size: 50px;
     letter-spacing: -1px;
     color: #911;
+    position: relative;
+    text-align: center;
+    top: -8vh;
 }
 
 i {

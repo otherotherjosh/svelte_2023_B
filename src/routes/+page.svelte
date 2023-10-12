@@ -1,12 +1,23 @@
+<script>
+    let heroTextOptions = [
+        "there have been pawprints spotted on the ceiling",
+        "one of these rooms has yarn all over the floor",
+        "mysterious scratch marks cover the wallpapers",
+        "don't let it fall asleep on you or you'll never get up",
+        "you hear a faint purring from around the corner",
+        "those items weren't supposed to be on the floor",
+        "you feel like you are being watched (from under the furniture)",
+        "meow"
+    ];
+    let heroText = heroTextOptions[Math.floor(Math.random()*heroTextOptions.length)] + "...";
+</script>
 
 <div class="hero">
-    <div class="filmGrain" style="background-size:64px"></div>
-    <div class="filmGrain" style="background-size:-50px"></div>
-    <div class="filmGrain" style="background-size:30px"></div>
+    <div class="filmGrain"></div>
     <div class="imgBackground">
-        <video autoplay muted loop>
-            <source src="/img/rain cat demo 1.mp4" type="video/mp4">
+        <video loop autoplay muted>
+            <source src="/img/willow-street.mp4" type="video/mp4">
         </video>
     </div>
-    <h1>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer""</h1>
+    <p>{heroText}</p>
 </div>
