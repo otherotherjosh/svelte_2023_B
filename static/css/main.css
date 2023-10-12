@@ -100,7 +100,7 @@ footer {
     z-index: 3;
     background-image: url("../img/noise.gif");
     background-repeat: repeat;
-    opacity: 0.03;
+    opacity: 0.04;
     position:absolute;
     height:inherit;
     width:inherit;
