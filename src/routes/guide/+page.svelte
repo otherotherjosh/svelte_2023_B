@@ -1,0 +1,13 @@
+<script>
+    import { onMount } from "svelte";
+
+    const key = "live_vG0dMaOCuDHFd0eSo0eGuC4J6QcX02uCLeMwnDr6DXqQxeVA6ATgx9NwJX5z59g4";
+    const BASE_URL = "https://api.thecatapi.com/v1";
+    let cats = [];
+
+    onMount( async () => {
+        const resp = await fetch(`${BASE_URL}/images/search?limit=10&api_key=${key}`);
+        cats = await resp.json();
+        console.log(cats);
+    });
+</script>
