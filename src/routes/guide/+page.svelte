@@ -11,3 +11,25 @@
         console.log(cats);
     });
 </script>
+
+<section class="gallery">
+    {#each cats as cat}
+        <div>
+            <div class="imgBackground" style=background-image:url({cat.url})></div>
+        </div>
+    {/each}
+</section>
+
+<style>
+    section.gallery {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    section.gallery > div {
+        width: 200px;
+        height: 200px;
+    }
+</style>
