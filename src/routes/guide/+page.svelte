@@ -5,9 +5,9 @@
     const BASE_URL = "https://api.thecatapi.com/v1";
     let cats = [];
     let breeds = [
-        {id: "java", evidence: [0, 3, 4], img: ""},
-        {id: "mcoo", evidence: [1, 4, 5], img: ""},
-        {id: "ycho", evidence: [0, 1, 6], img: ""}
+        {id: "java", evidence: [0, 3, 4], img: "", name: ""},
+        {id: "mcoo", evidence: [1, 4, 5], img: "", name: ""},
+        {id: "ycho", evidence: [0, 1, 6], img: "", name: ""}
     ];
     const evidence = [
         "D.O.T.S Projector",
@@ -28,6 +28,11 @@
         let data = await resp.json();
         breed.img = data[0].url;
         console.log(breed);
+
+        resp = await fetch(`${BASE_URL}/breeds/search?breed_ids=${breed.id}`);
+        data = await resp.json();
+        console.log(data);
+
         cats.push(breed);
         cats = cats;
     }
@@ -37,7 +42,11 @@
     {#each cats as cat}
         <div>
             <div class="imgBackground" style=background-image:url({cat.img})></div>
-            <h2>{cat.id}</h2>
+            <h2>{cat.name}</h2>
+            <h3>Evidence</h3>
+            <p>{evidence[cat.evidence[0]]}</p>
+            <p>{evidence[cat.evidence[1]]}</p>
+            <p>{evidence[cat.evidence[2]]}</p>
         </div>
     {/each}
 </section>
