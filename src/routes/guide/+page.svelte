@@ -5,9 +5,9 @@
     const BASE_URL = "https://api.thecatapi.com/v1";
     let cats = [];
     let breeds = [
-        {id: "java", evidence: [0, 3, 4], img: "", name: ""},
-        {id: "mcoo", evidence: [1, 4, 5], img: "", name: ""},
-        {id: "ycho", evidence: [0, 1, 6], img: "", name: ""}
+        {id: "java", evidence: [0, 3, 4]},
+        {id: "mcoo", evidence: [1, 4, 5]},
+        {id: "ycho", evidence: [0, 1, 6]}
     ];
     const evidence = [
         "D.O.T.S Projector",
@@ -20,6 +20,9 @@
     ];
 
     onMount( async () => {
+        // let resp = await fetch(`${BASE_URL}/breeds`);
+        // let data = await resp.json();
+        // console.log(data);
         breeds.forEach(breed => addBreedData(breed))
     });
 
