@@ -6,6 +6,8 @@
     let cats = [];
     let breeds = {
         "java" : [0, 3, 4],
+        "mcoo" : [1, 4, 5],
+        "ycho" : [0, 1, 6]
     };
     const evidence = [
         "D.O.T.S Projector",
@@ -18,10 +20,13 @@
     ];
 
     onMount( async () => {
-        let resp = await fetch(`${BASE_URL}/images/search?limit=10&api_key=${key}`);
-        cats = await resp.json();
-        console.log(cats);
+        breeds.foreach()
     });
+
+    async function addBreed(breed) {
+        let resp = await fetch(`${BASE_URL}/images/search?breed_ids={breed.id}?limit=1&api_key=${key}`);
+        let data = await resp.json();
+    }
 </script>
 
 <section class="gallery">
