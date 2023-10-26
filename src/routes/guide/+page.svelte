@@ -38,20 +38,6 @@
             cats[i].img = breedImg[0].url;
         }
     });
-
-    async function addBreedData(breed) {
-        let resp = await fetch(`${BASE_URL}/images/search?breed_ids=${breed.id}&api_key=${key}`);
-        let data = await resp.json();
-        breed.img = data[0].url;
-        console.log(breed);
-
-        resp = await fetch(`${BASE_URL}/breeds/search?breed_ids=${breed.id}`);
-        data = await resp.json();
-        console.log(data);
-
-        cats.push(breed);
-        cats = cats;
-    }
 </script>
 
 <section class="gallery">
