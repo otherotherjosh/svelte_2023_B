@@ -4,9 +4,17 @@
     const key = "live_vG0dMaOCuDHFd0eSo0eGuC4J6QcX02uCLeMwnDr6DXqQxeVA6ATgx9NwJX5z59g4";
     const BASE_URL = "https://api.thecatapi.com/v1";
     let cats = [
-        {index: 35, evidence: [0, 3, 4]},
-        {index: 40, evidence: [1, 4, 5]},
-        {index: 66, evidence: [0, 1, 6]}
+        {index: 35, evidence: [0, 3, 4]}, // Banshee - java
+        {index: 40, evidence: [1, 4, 5]}, // Demon - mcoo
+        {index: 66, evidence: [0, 1, 6]}, // Deogen - ycho
+        {index: 45, evidence: [3, 4, 5]}, // Hantu - norw
+        {index: 45, evidence: [0, 2, 5]}, // Oni - sphy
+        {index: 45, evidence: [1, 3, 5]}, // Revenant - emau
+        {index: 45, evidence: [1, 2, 5]}, // Shade - abys
+        {index: 45, evidence: [1, 2, 6]}, // Spirit - asho
+        {index: 45, evidence: [4, 5, 6]}, // The Mimic - bure
+        {index: 45, evidence: [2, 5, 6]}, // The Twins - siam
+        {index: 45, evidence: [0, 3, 6]}  // Yokai - sfol
     ];
 
     let breeds = [];
