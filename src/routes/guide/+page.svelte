@@ -4,11 +4,11 @@
     const key = "live_vG0dMaOCuDHFd0eSo0eGuC4J6QcX02uCLeMwnDr6DXqQxeVA6ATgx9NwJX5z59g4";
     const BASE_URL = "https://api.thecatapi.com/v1";
     let cats = [];
-    let breeds = {
-        "java" : [0, 3, 4],
-        "mcoo" : [1, 4, 5],
-        "ycho" : [0, 1, 6]
-    };
+    let breeds = [
+        {name: "java", evidence: [0, 3, 4]},
+        {name: "mcoo", evidence: [1, 4, 5]},
+        {name: "ycho", evidence: [0, 1, 6]}
+    ]
     const evidence = [
         "D.O.T.S Projector",
         "Ghost Writing",
