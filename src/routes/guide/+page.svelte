@@ -4,9 +4,21 @@
     const key = "live_vG0dMaOCuDHFd0eSo0eGuC4J6QcX02uCLeMwnDr6DXqQxeVA6ATgx9NwJX5z59g4";
     const BASE_URL = "https://api.thecatapi.com/v1";
     let cats = [];
+    let breeds = {
+        "java" : [0, 3, 4],
+    };
+    const evidence = [
+        "D.O.T.S Projector",
+        "Ghost Writing",
+        "EMF Level 5",
+        "Ghost Orb",
+        "Ultraviolet",
+        "Freezing Temperatures",
+        "Spirit Box"
+    ];
 
     onMount( async () => {
-        const resp = await fetch(`${BASE_URL}/images/search?limit=10&api_key=${key}`);
+        let resp = await fetch(`${BASE_URL}/images/search?limit=10&api_key=${key}`);
         cats = await resp.json();
         console.log(cats);
     });
