@@ -3,12 +3,14 @@
 
     const key = "live_vG0dMaOCuDHFd0eSo0eGuC4J6QcX02uCLeMwnDr6DXqQxeVA6ATgx9NwJX5z59g4";
     const BASE_URL = "https://api.thecatapi.com/v1";
-    let cats = [];
-    let breeds = [
-        {id: "java", evidence: [0, 3, 4]},
-        {id: "mcoo", evidence: [1, 4, 5]},
-        {id: "ycho", evidence: [0, 1, 6]}
+    let cats = [
+        {index: 35, evidence: [0, 3, 4]},
+        {index: 40, evidence: [1, 4, 5]},
+        {index: 66, evidence: [0, 1, 6]}
     ];
+
+    let breeds = [];
+
     const evidence = [
         "D.O.T.S Projector",
         "Ghost Writing",
@@ -20,10 +22,21 @@
     ];
 
     onMount( async () => {
-        // let resp = await fetch(`${BASE_URL}/breeds`);
-        // let data = await resp.json();
-        // console.log(data);
-        breeds.forEach(breed => addBreedData(breed))
+        let resp = await fetch(`${BASE_URL}/breeds`);
+        breeds = await resp.json();
+        console.log(breeds); 
+
+        let breed;
+        let breedImg;
+        
+        for (let i = 0; i < cats.length; i++) {
+            breed = breeds[cats[i].index];
+            cats[i].name = breed.name;
+            resp = await fetch(`${BASE_URL}/images/search?breed_ids=${breed.id}&api_key=${key}`);
+            breedImg = await resp.json();
+            console.log(breedImg);
+            cats[i].img = breedImg[0].url;
+        }
     });
 
     async function addBreedData(breed) {
