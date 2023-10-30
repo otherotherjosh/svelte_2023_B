@@ -9,7 +9,7 @@
             <div class="title"></div>
         </div>
         <div class="headerRight">
-            icons
+            <a href="/guide">guide</a>
         </div>
     </div>
 </header>
