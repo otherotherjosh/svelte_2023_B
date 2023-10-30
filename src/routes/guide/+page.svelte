@@ -51,12 +51,12 @@
 <section class="gallery">
     {#each cats as cat}
         <div class="card">
+            <h2>{cat.name}</h2>
             <div class="cardImg" title="{cat.name}">
                 <div class="filmGrain"/>
                 <div class="darken"/>
                 <img src={cat.img} alt="picture of {cat.name}"/>
             </div>
-            <h2>{cat.name}</h2>
             <h3>Evidence</h3>
             <p>{evidence[cat.evidence[0]]}</p>
             <p>{evidence[cat.evidence[1]]}</p>
@@ -69,23 +69,30 @@
     section.gallery {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         flex-wrap: wrap;
         width: 100%;
+        height: 100vh;
     }
 
-    section.gallery > div {
-        width: 200px;
+    .card {
         height: 200px;
+        width: 400px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: solid black;
     }
-    
+
     .cardImg {
         width: 150px;
         height: 150px;
     }
-
+    
     .cardImg img {
         width: inherit;
         height: inherit;
-        image-rendering: smooth;
+        object-fit: cover;
     }
 </style>
