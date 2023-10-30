@@ -50,8 +50,12 @@
 
 <section class="gallery">
     {#each cats as cat}
-        <div>
-            <div class="imgBackground" style=background-image:url({cat.img})></div>
+        <div class="card">
+            <div class="cardImg" title="{cat.name}">
+                <div class="filmGrain"/>
+                <div class="darken"/>
+                <img src={cat.img} alt="picture of {cat.name}"/>
+            </div>
             <h2>{cat.name}</h2>
             <h3>Evidence</h3>
             <p>{evidence[cat.evidence[0]]}</p>
@@ -72,5 +76,16 @@
     section.gallery > div {
         width: 200px;
         height: 200px;
+    }
+    
+    .cardImg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cardImg img {
+        width: inherit;
+        height: inherit;
+        image-rendering: smooth;
     }
 </style>
