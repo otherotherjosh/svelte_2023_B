@@ -48,8 +48,13 @@
 		}
 	});
 
-	function switchCat() {
+	function nextCat() {
 		catIndex++;
+		catIndex %= cats.length;
+	}
+
+	function prevCat() {
+		catIndex--;
 		catIndex %= cats.length;
 	}
 </script>
@@ -67,7 +72,8 @@
 		<p>{evidence[cats[catIndex].evidence[1]]}</p>
 		<p>{evidence[cats[catIndex].evidence[2]]}</p>
 	</div>
-    <button on:click={switchCat} style="position:absolute;top:0px">next</button>
+    <button on:click={nextCat} style="position:absolute;top:0px;">next</button>
+    <button on:click={prevCat} style="position:absolute;top:10px;">prev</button>
 </section>
 
 <style>
