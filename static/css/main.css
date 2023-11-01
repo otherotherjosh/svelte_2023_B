@@ -111,6 +111,15 @@ footer {
     width:inherit;
 }
 
+.darken {
+    z-index: 2;
+    background-color: black;
+    opacity: 0.3;
+    position:absolute;
+    height:inherit;
+    width:inherit;
+}
+
 .imgBackground {
     z-index: -999;
     position:absolute;
