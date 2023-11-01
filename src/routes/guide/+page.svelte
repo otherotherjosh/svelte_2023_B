@@ -38,6 +38,7 @@
 		let breed;
 		let breedImg;
 
+		let frameNo = 1;
 		for (let i = 0; i < cats.length; i++) {
 			breed = breeds[cats[i].index];
 			cats[i].name = breed.name;
@@ -45,6 +46,9 @@
 			breedImg = await resp.json();
 			console.log(breedImg);
 			cats[i].img = breedImg[0].url;
+			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`
+			frameNo++;
+			if (frameNo > 4) frameNo = 1;
 		}
 	});
 
@@ -60,26 +64,26 @@
 </script>
 
 <section class="gallery">
-	<h2>{cats[catIndex].name}</h2>
+	<!-- <h2>{cats[catIndex].name}</h2> -->
 	<div class="card">
-		<div class="cardImg" title={cats[catIndex].name}>
+		<div class="cardTape" style="background-image:url({cats[catIndex].frame})"/>
+		<div class="cardImg" style="background-image:url({cats[catIndex].img})">
 			<div class="filmGrain" />
 			<div class="darken" />
-			<img src={cats[catIndex].img} alt="picture of {cats[catIndex].name}" />
 		</div>
-		<h3>Evidence</h3>
-		<p>{evidence[cats[catIndex].evidence[0]]}</p>
-		<p>{evidence[cats[catIndex].evidence[1]]}</p>
-		<p>{evidence[cats[catIndex].evidence[2]]}</p>
 	</div>
-    <button on:click={nextCat} style="position:absolute;top:0px;">next</button>
-    <button on:click={prevCat} style="position:absolute;top:10px;">prev</button>
+	<!-- <h3>Evidence</h3>
+	<p>{evidence[cats[catIndex].evidence[0]]}</p>
+	<p>{evidence[cats[catIndex].evidence[1]]}</p>
+	<p>{evidence[cats[catIndex].evidence[2]]}</p> -->
+	<button on:click={nextCat} style="position:absolute;top:0px;">next</button>
+	<button on:click={prevCat} style="position:absolute;top:30px;">prev</button>
 </section>
 
 <style>
 	section.gallery {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 		width: 100%;
@@ -87,23 +91,28 @@
 	}
 
 	.card {
-		height: 200px;
-		width: 400px;
-		padding: 5px;
+		width: 700px;
+		height: 400px;
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		border: solid black;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.cardTape {
+		position: absolute;
+		width: inherit;
+		height: inherit;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		z-index: 5;
 	}
 
 	.cardImg {
-		width: 711px;
-		height: 400px;
-	}
-
-	.cardImg img {
-		width: inherit;
-		height: inherit;
-		object-fit: stretch;
+		position: relative;
+		width: 80%;
+		height: 78%;
+		background-size: cover;
+		background-position: center;
 	}
 </style>

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
+    background-color: black;
 }
 
 h1, p {
@@ -107,8 +108,8 @@ footer {
     background-repeat: repeat;
     opacity: 0.04;
     position:absolute;
-    height:inherit;
-    width:inherit;
+    height:100%;
+    width:100%;
 }
 
 .darken {
@@ -116,8 +117,8 @@ footer {
     background-color: black;
     opacity: 0.3;
     position:absolute;
-    height:inherit;
-    width:inherit;
+    height:100%;
+    width:100%;
 }
 
 .imgBackground {
