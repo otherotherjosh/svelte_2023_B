@@ -44,7 +44,6 @@
 			cats[i].name = breed.name;
 			resp = await fetch(`${BASE_URL}/images/search?breed_ids=${breed.id}&api_key=${key}`);
 			breedImg = await resp.json();
-			console.log(breedImg);
 			cats[i].img = breedImg[0].url;
 			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`
 			cats[i].rotate = Math.floor(Math.random() * 11) - 5;
@@ -84,13 +83,10 @@
 			<p>{evidence[cats[catIndex].evidence[2]]}</p>
 		</div>
 		<div class="page">
-
 		</div>
+		<button on:click={prevCat} style="left: 0px;"/>
+		<button on:click={nextCat} style="right: 0px;"/>
 	</div>
-
-	
-	<button on:click={nextCat} style="position:absolute;top:0px;">next</button>
-	<button on:click={prevCat} style="position:absolute;top:30px;">prev</button>
 </section>
 
 <style>
@@ -107,6 +103,7 @@
 	}
 	
 	div.journal {
+		position: relative;
 		box-sizing: border-box;
 		z-index: 6;
 		background-image: url(../img/journal.png);
@@ -118,6 +115,15 @@
 		padding: 45px 100px 25px 80px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+	}
+
+	div.journal > button {
+		box-sizing: border-box;
+		width: 50px;
+		height: 176px;
+		position: absolute;
+		opacity: 0;
+		top: 420px;
 	}
 
 	div.journal > .page {
