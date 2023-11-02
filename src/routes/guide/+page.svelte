@@ -93,23 +93,27 @@
 		background-repeat: no-repeat;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		width: 100%;
-		height: 100vh;
+		height: 1080px;
 	}
 	
 	div.journal {
+		box-sizing: border-box;
 		z-index: 6;
 		background-image: url(../img/journal.png);
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
-		width: 75%;
+		width: 1339px;
+		height: 979px;
+		padding: 50px 75px;
 		border: dotted green;
 	}
 
 	.photo {
-		width: 700px;
-		height: 400px;
+		width: 576px;
+		height: 324px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -127,7 +131,7 @@
 
 	.photo > .img {
 		position: relative;
-		width: 80%;
+		width: 78%;
 		height: 78%;
 		background-size: cover;
 		background-position: center;
