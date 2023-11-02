@@ -47,6 +47,7 @@
 			console.log(breedImg);
 			cats[i].img = breedImg[0].url;
 			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`
+			cats[i].rotate = Math.floor(Math.random() * 11) - 5;
 			frameNo++;
 			if (frameNo > 4) frameNo = 1;
 		}
@@ -67,19 +68,19 @@
 	<div class="filmGrain" />
 	<div class="darken" />
 	<div class="journal">
-		<div class="photo">
+		<div class="photo" style="rotate:{cats[catIndex].rotate}deg;">
 			<div class="tape" style="background-image:url({cats[catIndex].frame})"/>
 			<div class="img" style="background-image:url({cats[catIndex].img})">
 				<div class="filmGrain" />
 				<div class="darken" />
 			</div>
 		</div>
+		<h2>Evidence</h2>
+		<p>{evidence[cats[catIndex].evidence[0]]}</p>
+		<p>{evidence[cats[catIndex].evidence[1]]}</p>
+		<p>{evidence[cats[catIndex].evidence[2]]}</p>
 	</div>
 
-	<!-- <h3>Evidence</h3>
-	<p>{evidence[cats[catIndex].evidence[0]]}</p>
-	<p>{evidence[cats[catIndex].evidence[1]]}</p>
-	<p>{evidence[cats[catIndex].evidence[2]]}</p> -->
 	
 	<button on:click={nextCat} style="position:absolute;top:0px;">next</button>
 	<button on:click={prevCat} style="position:absolute;top:30px;">prev</button>
@@ -117,6 +118,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		rotate: 5deg;
 	}
 
 	.photo > .tape {
