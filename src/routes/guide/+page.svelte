@@ -63,34 +63,51 @@
 	}
 </script>
 
-<section class="gallery">
-	<!-- <h2>{cats[catIndex].name}</h2> -->
-	<div class="card">
-		<div class="cardTape" style="background-image:url({cats[catIndex].frame})"/>
-		<div class="cardImg" style="background-image:url({cats[catIndex].img})">
-			<div class="filmGrain" />
-			<div class="darken" />
+<section class="guide">
+	<div class="filmGrain" />
+	<div class="darken" />
+	<div class="journal">
+		<div class="photo">
+			<div class="tape" style="background-image:url({cats[catIndex].frame})"/>
+			<div class="img" style="background-image:url({cats[catIndex].img})">
+				<div class="filmGrain" />
+				<div class="darken" />
+			</div>
 		</div>
 	</div>
+
 	<!-- <h3>Evidence</h3>
 	<p>{evidence[cats[catIndex].evidence[0]]}</p>
 	<p>{evidence[cats[catIndex].evidence[1]]}</p>
 	<p>{evidence[cats[catIndex].evidence[2]]}</p> -->
+	
 	<button on:click={nextCat} style="position:absolute;top:0px;">next</button>
 	<button on:click={prevCat} style="position:absolute;top:30px;">prev</button>
 </section>
 
 <style>
-	section.gallery {
+	section.guide {
+		background-image: url(../img/inside_ridgeview.jpg);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
 		width: 100%;
 		height: 100vh;
 	}
+	
+	div.journal {
+		z-index: 6;
+		background-image: url(../img/journal.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 75%;
+		border: dotted green;
+	}
 
-	.card {
+	.photo {
 		width: 700px;
 		height: 400px;
 		display: flex;
@@ -98,7 +115,7 @@
 		align-items: center;
 	}
 
-	.cardTape {
+	.photo > .tape {
 		position: absolute;
 		width: inherit;
 		height: inherit;
@@ -108,7 +125,7 @@
 		z-index: 5;
 	}
 
-	.cardImg {
+	.photo > .img {
 		position: relative;
 		width: 80%;
 		height: 78%;
