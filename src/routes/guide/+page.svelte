@@ -68,17 +68,23 @@
 	<div class="filmGrain" />
 	<div class="darken" />
 	<div class="journal">
-		<div class="photo" style="rotate:{cats[catIndex].rotate}deg;">
-			<div class="tape" style="background-image:url({cats[catIndex].frame})"/>
-			<div class="img" style="background-image:url({cats[catIndex].img})">
-				<div class="filmGrain" />
-				<div class="darken" />
+		<div class="page">
+			<h2>{cats[catIndex].name}</h2>
+			<div class="photo" style="rotate:{cats[catIndex].rotate}deg;">
+				<div class="tape" style="background-image:url({cats[catIndex].frame})"/>
+				<div class="img" style="background-image:url({cats[catIndex].img})">
+					<div class="filmGrain" />
+					<div class="darken" />
+				</div>
 			</div>
+			<h3>Evidence</h3>
+			<p>{evidence[cats[catIndex].evidence[0]]}</p>
+			<p>{evidence[cats[catIndex].evidence[1]]}</p>
+			<p>{evidence[cats[catIndex].evidence[2]]}</p>
 		</div>
-		<h2>Evidence</h2>
-		<p>{evidence[cats[catIndex].evidence[0]]}</p>
-		<p>{evidence[cats[catIndex].evidence[1]]}</p>
-		<p>{evidence[cats[catIndex].evidence[2]]}</p>
+		<div class="page">
+
+		</div>
 	</div>
 
 	
@@ -108,8 +114,13 @@
 		background-repeat: no-repeat;
 		width: 1339px;
 		height: 979px;
-		padding: 50px 75px;
-		border: dotted green;
+		padding: 45px 100px 25px 80px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	div.journal > .page {
+		border: dotted blue;
 	}
 
 	.photo {
