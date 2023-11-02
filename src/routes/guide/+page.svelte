@@ -60,7 +60,8 @@
 
 	function prevCat() {
 		catIndex--;
-		catIndex %= cats.length;
+		if (catIndex < 0) catIndex = cats.length - 1;
+		console.log(catIndex);
 	}
 </script>
 
