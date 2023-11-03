@@ -124,6 +124,7 @@
 		position: absolute;
 		opacity: 0;
 		top: 420px;
+		cursor: pointer;
 	}
 
 	div.journal > .page {
