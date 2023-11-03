@@ -128,7 +128,8 @@
 	}
 
 	div.journal > .page {
-		border: dotted blue;
+		/* border: dotted blue; */
+		padding: 40px;
 	}
 
 	.photo {
@@ -138,6 +139,9 @@
 		justify-content: center;
 		align-items: center;
 		rotate: 5deg;
+		position: relative;
+		right: 40px;
+		margin: 15px 0px;
 	}
 
 	.photo > .tape {
