@@ -11,4 +11,8 @@ I am going to steal this concept.
 
 I also like the hero section. Note to self: elaborate on the hero section.
 
-https://www.nasa.gov/
+<a href="https://www.nasa.gov/">![NASA](./docs/inspiration-nasa.JPG)</a>
+Website of NASA
+
+<a href="https://www.spiritbox.com/">![Spiritbox](./docs/inspiration-spiritbox.JPG)</a>
+Website of the band Spiritbox

@@ -4,9 +4,16 @@ body {
     background-color: black;
 }
 
-h1, p {
+h2, h3, p {
+    font-weight: 100;
     margin: 0px;
+    font-family: 'Lazy-Dog';
+    color: #353535;
 }
+
+h2 { font-size: 60px; }
+h3 { font-size: 40px; }
+p { font-size: 28px; }
 
 /* * * * * * * * * * * * */
 /*         fonts         */
@@ -15,6 +22,11 @@ h1, p {
 @font-face {
     font-family: October-Crow;
     src: url("../font/October Crow.ttf");
+}
+
+@font-face {
+    font-family: Lazy-Dog;
+    src: url("../font/Lazy Dog.ttf");
 }
 
 .hero > p {
