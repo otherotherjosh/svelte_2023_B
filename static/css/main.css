@@ -154,7 +154,6 @@ video {
 /* * * * * * * * * * * * */
 
 section.guide {
-    background-image: url(../img/inside_ridgeview.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -163,6 +162,10 @@ section.guide {
     align-items: center;
     width: 100vw;
     height: 1080px;
+}
+
+section.guide > .imgBackground {
+    filter: blur(5px);
 }
 
 .journal {

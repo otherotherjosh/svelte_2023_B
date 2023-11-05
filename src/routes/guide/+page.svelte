@@ -65,8 +65,8 @@
 </script>
 
 <section class="guide">
+	<div class="imgBackground" style="background-image:url(../img/inside_ridgeview.jpg);" />
 	<div class="filmGrain" />
-	<div class="darken" />
 	<div class="journal">
 		<div class="page">
 			<h1>{cats[catIndex].name}</h1>
