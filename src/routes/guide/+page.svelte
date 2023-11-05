@@ -8,8 +8,10 @@
 	
 	let breeds = [];
 	let catIndex = 0;
+	let rotateImages = [0, 0, 0, 0];
 
 	onMount(async () => {
+		randRotate();
 		let resp = await fetch(`${BASE_URL}/breeds`);
 		breeds = await resp.json();
 		console.log(breeds);
@@ -25,7 +27,6 @@
 			breedImg = await resp.json();
 			cats[i].img = breedImg[0].url;
 			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`;
-			cats[i].rotate = randRotate();
 			frameNo++;
 			if (frameNo > 4) frameNo = 1;
 		}
@@ -34,18 +35,21 @@
 	function nextCat() {
 		catIndex++;
 		catIndex %= cats.length;
+		randRotate();
 	}
 
 	function prevCat() {
 		catIndex--;
 		if (catIndex < 0) catIndex = cats.length - 1;
-		console.log(catIndex);
+		randRotate();
 	}
 
 	function randRotate() {
 		let range = 5;
 		let mult = range * 2 + 1;
-		return Math.floor(Math.random() * mult) - range
+		for (let i = 0; i < rotateImages.length; i++) {
+			rotateImages[i] = Math.floor(Math.random() * mult) - range
+		}
 	}
 </script>
 
@@ -55,7 +59,7 @@
 	<div class="journal">
 		<div class="page">
 			<h1>{cats[catIndex].name}</h1>
-			<div class="photo" style="rotate:{cats[catIndex].rotate}deg;">
+			<div class="photo" style="rotate:{rotateImages[3]}deg;">
 				<p>loading image</p>
 				<div class="tape" style="background-image:url({cats[catIndex].frame})" />
 				<div class="filmGrain" />
@@ -67,14 +71,13 @@
 			{#each {length: 3} as _, i}
 				<div class="evidence">
 					<!-- svelte-ignore a11y-missing-attribute -->
-					<img src={evidence[cats[catIndex].evidence[i]].image} style="order:{(i + catIndex) % 2};rotate:{randRotate()}deg;"/>
+					<img src={evidence[cats[catIndex].evidence[i]].image} style="order:{(i + catIndex) % 2};rotate:{rotateImages[i]}deg;"/>
 					<div class="text">
 						<h3>{evidence[cats[catIndex].evidence[i]].name}</h3>
 						<p>{evidence[cats[catIndex].evidence[i]].description}</p>
 					</div>
 				</div>
 			{/each}
-
 		</div>
 		<button on:click={prevCat} style="left: 0px;" />
 		<button on:click={nextCat} style="right: 0px;" />
