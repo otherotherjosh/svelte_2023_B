@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import {cats} from "$lib/cats.js";
-	import {evidence} from "$lib/evidence.js";
-
+	import { cats } from "$lib/cats.js";
+	import { evidence } from "$lib/evidence.js";
+ 
 	const key = 'live_vG0dMaOCuDHFd0eSo0eGuC4J6QcX02uCLeMwnDr6DXqQxeVA6ATgx9NwJX5z59g4';
 	const BASE_URL = 'https://api.thecatapi.com/v1';
 	
@@ -25,7 +25,7 @@
 			breedImg = await resp.json();
 			cats[i].img = breedImg[0].url;
 			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`;
-			cats[i].rotate = Math.floor(Math.random() * 11) - 5;
+			cats[i].rotate = randRotate();
 			frameNo++;
 			if (frameNo > 4) frameNo = 1;
 		}
@@ -41,6 +41,12 @@
 		if (catIndex < 0) catIndex = cats.length - 1;
 		console.log(catIndex);
 	}
+
+	function randRotate() {
+		let range = 5;
+		let mult = range * 2 + 1;
+		return Math.floor(Math.random() * mult) - range
+	}
 </script>
 
 <section class="guide">
@@ -55,12 +61,21 @@
 				<div class="filmGrain" />
 				<div class="img" style="background-image:url({cats[catIndex].img})" />
 			</div>
-			<h2>Evidence</h2>
-			<h3>{evidence[cats[catIndex].evidence[0]]}</h3>
-			<h3>{evidence[cats[catIndex].evidence[1]]}</h3>
-			<h3>{evidence[cats[catIndex].evidence[2]]}</h3>
 		</div>
-		<div class="page" />
+		<div class="page">
+			<h2>Evidence</h2>
+			{#each {length: 3} as _, i}
+				<div class="evidence">
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<img src={evidence[cats[catIndex].evidence[i]].image} style="order:{(i + catIndex) % 2};rotate:{randRotate()}deg;"/>
+					<div class="text">
+						<h3>{evidence[cats[catIndex].evidence[i]].name}</h3>
+						<p>{evidence[cats[catIndex].evidence[i]].description}</p>
+					</div>
+				</div>
+			{/each}
+
+		</div>
 		<button on:click={prevCat} style="left: 0px;" />
 		<button on:click={nextCat} style="right: 0px;" />
 	</div>

@@ -28,11 +28,14 @@ p {
     color: #353535;
 }    
 
-h1 { font-size: 69px; }
-h2 { font-size: 60px; }    
-h3 { font-size: 40px; }    
+h1 { font-size: 60px; }
+h2 { font-size: 45px; }    
+h3 { font-size: 35px; }    
 
-p { font-size: 28px; }    
+p {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
 
 .hero>p {
     text-transform: lowercase;
@@ -161,7 +164,7 @@ section.guide {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 1080px;
+    height: 1280px;
 }
 
 section.guide > .imgBackground {
@@ -195,18 +198,19 @@ section.guide > .imgBackground {
 
 .journal > .page {
     border: dotted blue;
-    padding: 40px;
+    padding: 15px 40px;
+    overflow: scroll;
 }
 
 .photo {
-    width: 576px;
-    height: 324px;
+    width: 416px;
+    height: 234px;
     display: flex;
     justify-content: center;
     align-items: center;
     rotate: 5deg;
     position: relative;
-    right: 40px;
+    left: 32px;
 }
 
 .photo > .tape {
@@ -231,8 +235,22 @@ section.guide > .imgBackground {
     height: 78%;
 }
 
+.evidence {
+    display: flex;
+    align-items: center;
+}
+
+.evidence > img {
+    width: 150px;
+    height: 150px;
+}
+
+.evidence > .text {
+    width: 100%;
+}
+
 /* * * * * * * * * * * * */
-/*       responsive      */
+/*     responsiveness    */
 /* * * * * * * * * * * * */
 
 @media (max-width:850px) {
@@ -243,10 +261,6 @@ section.guide > .imgBackground {
 
     .title {
         font-size: 60px;
-    }
-
-    .title::after {
-        content: "P";
     }
 }
 
