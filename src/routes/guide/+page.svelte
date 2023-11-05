@@ -23,6 +23,7 @@
 		for (let i = 0; i < cats.length; i++) {
 			breed = breeds[cats[i].index];
 			cats[i].name = breed.name;
+			cats[i].description = breed.description;
 			resp = await fetch(`${BASE_URL}/images/search?breed_ids=${breed.id}&api_key=${key}`);
 			breedImg = await resp.json();
 			cats[i].img = breedImg[0].url;
@@ -65,6 +66,7 @@
 				<div class="filmGrain" />
 				<div class="img" style="background-image:url({cats[catIndex].img})" />
 			</div>
+			<p>{cats[catIndex].description}</p>
 		</div>
 		<div class="page">
 			<h2>Evidence</h2>

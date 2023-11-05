@@ -1,3 +1,7 @@
+:root {
+    --background-blur: 5px;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -157,18 +161,16 @@ video {
 /* * * * * * * * * * * * */
 
 section.guide {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 1280px;
+    width: 100%;
+    height: 1380px;
 }
 
 section.guide > .imgBackground {
-    filter: blur(5px);
+    filter: blur(var(--background-blur));
 }
 
 .journal {
