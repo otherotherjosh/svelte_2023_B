@@ -71,6 +71,7 @@
 		<div class="page">
 			<h1>{cats[catIndex].name}</h1>
 			<div class="photo" style="rotate:{cats[catIndex].rotate}deg;">
+				<p>loading image</p>
 				<div class="tape" style="background-image:url({cats[catIndex].frame})" />
 				<div class="filmGrain" />
 				<div class="img" style="background-image:url({cats[catIndex].img})" />

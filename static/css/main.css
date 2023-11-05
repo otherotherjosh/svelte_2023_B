@@ -165,7 +165,7 @@ section.guide {
     height: 1080px;
 }
 
-div.journal {
+.journal {
     position: relative;
     box-sizing: border-box;
     z-index: 6;
@@ -177,10 +177,10 @@ div.journal {
     height: 979px;
     padding: 45px 100px 25px 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 50%);
 }
 
-div.journal > button {
+.journal > button {
     box-sizing: border-box;
     width: 50px;
     height: 176px;
@@ -190,8 +190,8 @@ div.journal > button {
     cursor: pointer;
 }
 
-div.journal > .page {
-    /* border: dotted blue; */
+.journal > .page {
+    border: dotted blue;
     padding: 40px;
 }
 
@@ -204,7 +204,6 @@ div.journal > .page {
     rotate: 5deg;
     position: relative;
     right: 40px;
-    margin: 15px 0px;
 }
 
 .photo > .tape {
