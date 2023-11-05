@@ -2,18 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     background-color: black;
-}
-
-h2, h3, p {
-    font-weight: 100;
-    margin: 0px;
-    font-family: 'Lazy-Dog';
-    color: #353535;
-}
-
-h2 { font-size: 60px; }
-h3 { font-size: 40px; }
-p { font-size: 28px; }
+}    
 
 /* * * * * * * * * * * * */
 /*         fonts         */
@@ -29,7 +18,23 @@ p { font-size: 28px; }
     src: url("../font/Lazy Dog.ttf");
 }
 
-.hero > p {
+h1,
+h2,
+h3,
+p {
+    font-weight: 100;
+    margin: 0px;
+    font-family: 'Lazy-Dog';
+    color: #353535;
+}    
+
+h1 { font-size: 69px; }
+h2 { font-size: 60px; }    
+h3 { font-size: 40px; }    
+
+p { font-size: 28px; }    
+
+.hero>p {
     text-transform: lowercase;
     font-family: 'Heebo', sans-serif;
     font-size: 50px;
@@ -119,23 +124,14 @@ footer {
     background-image: url("../img/noise.gif");
     background-repeat: repeat;
     opacity: 0.04;
-    position:absolute;
-    height:100%;
-    width:100%;
-}
-
-.darken {
-    z-index: 2;
-    background-color: black;
-    opacity: 0.3;
-    position:absolute;
-    height:100%;
-    width:100%;
+    position: absolute;
+    width: inherit;
+    height: inherit;
 }
 
 .imgBackground {
     z-index: -999;
-    position:absolute;
+    position: absolute;
     width: inherit;
     height: inherit;
     background-size: cover;
@@ -153,16 +149,100 @@ video {
     object-fit: cover;
 }
 
+/* * * * * * * * * * * * */
+/*         guide         */
+/* * * * * * * * * * * * */
+
+section.guide {
+    background-image: url(../img/inside_ridgeview.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 1080px;
+}
+
+div.journal {
+    position: relative;
+    box-sizing: border-box;
+    z-index: 6;
+    background-image: url(../img/journal.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1339px;
+    height: 979px;
+    padding: 45px 100px 25px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.journal > button {
+    box-sizing: border-box;
+    width: 50px;
+    height: 176px;
+    position: absolute;
+    opacity: 0;
+    top: 420px;
+    cursor: pointer;
+}
+
+div.journal > .page {
+    /* border: dotted blue; */
+    padding: 40px;
+}
+
+.photo {
+    width: 576px;
+    height: 324px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: 5deg;
+    position: relative;
+    right: 40px;
+    margin: 15px 0px;
+}
+
+.photo > .tape {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+}
+
+.photo > .img {
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px) brightness(80%);
+}
+
+.photo > .img, .photo > .filmGrain {
+    position: absolute;
+    width: 78%;
+    height: 78%;
+}
+
+/* * * * * * * * * * * * */
+/*       responsive      */
+/* * * * * * * * * * * * */
+
 @media (max-width:850px) {
     .headerWrap {
         width: 100%;
-        margin: 0px 20px; 
+        margin: 0px 20px;
     }
 
     .title {
         font-size: 60px;
     }
-    
+
     .title::after {
         content: "P";
     }

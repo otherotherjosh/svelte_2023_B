@@ -21,13 +21,13 @@
 	let catIndex = 0;
 
 	const evidence = [
-		'D.O.T.S Projector',
-		'Ghost Writing',
+		'C.A.T.S Projector',
+		'Cat Writing',
 		'EMF Level 5',
-		'Ghost Orb',
+		'Cat Orb',
 		'Ultraviolet',
 		'Freezing Temperatures',
-		'Spirit Box'
+		'Litter Box'
 	];
 
 	onMount(async () => {
@@ -45,7 +45,7 @@
 			resp = await fetch(`${BASE_URL}/images/search?breed_ids=${breed.id}&api_key=${key}`);
 			breedImg = await resp.json();
 			cats[i].img = breedImg[0].url;
-			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`
+			cats[i].frame = `../img/taped_photo_frame_${frameNo}.png`;
 			cats[i].rotate = Math.floor(Math.random() * 11) - 5;
 			frameNo++;
 			if (frameNo > 4) frameNo = 1;
@@ -69,96 +69,19 @@
 	<div class="darken" />
 	<div class="journal">
 		<div class="page">
-			<h2>{cats[catIndex].name}</h2>
+			<h1>{cats[catIndex].name}</h1>
 			<div class="photo" style="rotate:{cats[catIndex].rotate}deg;">
-				<div class="tape" style="background-image:url({cats[catIndex].frame})"/>
-				<div class="img" style="background-image:url({cats[catIndex].img})">
-					<div class="filmGrain" />
-					<div class="darken" />
-				</div>
+				<div class="tape" style="background-image:url({cats[catIndex].frame})" />
+				<div class="filmGrain" />
+				<div class="img" style="background-image:url({cats[catIndex].img})" />
 			</div>
-			<h3>Evidence</h3>
-			<p>{evidence[cats[catIndex].evidence[0]]}</p>
-			<p>{evidence[cats[catIndex].evidence[1]]}</p>
-			<p>{evidence[cats[catIndex].evidence[2]]}</p>
+			<h2>Evidence</h2>
+			<h3>{evidence[cats[catIndex].evidence[0]]}</h3>
+			<h3>{evidence[cats[catIndex].evidence[1]]}</h3>
+			<h3>{evidence[cats[catIndex].evidence[2]]}</h3>
 		</div>
-		<div class="page">
-		</div>
-		<button on:click={prevCat} style="left: 0px;"/>
-		<button on:click={nextCat} style="right: 0px;"/>
+		<div class="page" />
+		<button on:click={prevCat} style="left: 0px;" />
+		<button on:click={nextCat} style="right: 0px;" />
 	</div>
 </section>
-
-<style>
-	section.guide {
-		background-image: url(../img/inside_ridgeview.jpg);
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 1080px;
-	}
-	
-	div.journal {
-		position: relative;
-		box-sizing: border-box;
-		z-index: 6;
-		background-image: url(../img/journal.png);
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		width: 1339px;
-		height: 979px;
-		padding: 45px 100px 25px 80px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-
-	div.journal > button {
-		box-sizing: border-box;
-		width: 50px;
-		height: 176px;
-		position: absolute;
-		opacity: 0;
-		top: 420px;
-		cursor: pointer;
-	}
-
-	div.journal > .page {
-		/* border: dotted blue; */
-		padding: 40px;
-	}
-
-	.photo {
-		width: 576px;
-		height: 324px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		rotate: 5deg;
-		position: relative;
-		right: 40px;
-		margin: 15px 0px;
-	}
-
-	.photo > .tape {
-		position: absolute;
-		width: inherit;
-		height: inherit;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		z-index: 5;
-	}
-
-	.photo > .img {
-		position: relative;
-		width: 78%;
-		height: 78%;
-		background-size: cover;
-		background-position: center;
-	}
-</style>
