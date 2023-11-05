@@ -197,9 +197,9 @@ section.guide > .imgBackground {
 }
 
 .journal > .page {
-    border: dotted blue;
+    /* border: dotted blue; */
     padding: 15px 40px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .photo {
