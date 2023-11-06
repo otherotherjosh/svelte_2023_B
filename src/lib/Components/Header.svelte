@@ -9,7 +9,7 @@
             <div class="title"><a href="/">Phasmeowphobia</a></div>
         </div>
         <div class="headerRight">
-            <a href="/guide">guide</a>
+            <p><a href="/guide">guide</a></p>
         </div>
     </div>
 </header>

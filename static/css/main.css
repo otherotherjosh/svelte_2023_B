@@ -41,8 +41,12 @@ p {
     margin-bottom: 15px;
 }
 
-.hero>p {
-    text-transform: uppercase;
+header p {
+    margin: 0;
+}
+
+.hero > p {
+    text-transform: lowercase;
     font-family: 'Heebo', sans-serif;
     font-size: 50px;
     letter-spacing: -1px;

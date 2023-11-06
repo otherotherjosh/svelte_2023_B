@@ -20,7 +20,4 @@
         </video>
     </div>
     <p>{heroText}</p>
-    <a href="/foyer" style=z-index:5>
-        <button>go inside</button>
-    </a>
 </div>
