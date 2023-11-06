@@ -38,7 +38,6 @@ h3 { font-size: 35px; }
 
 p {
     font-size: 25px;
-    margin-bottom: 15px;
 }
 
 header p {
@@ -208,6 +207,9 @@ section.guide > .imgBackground {
     /* border: dotted blue; */
     padding: 15px 40px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .photo {
@@ -219,6 +221,7 @@ section.guide > .imgBackground {
     rotate: 5deg;
     position: relative;
     left: 32px;
+    margin-bottom: 100px;
 }
 
 .photo > .tape {

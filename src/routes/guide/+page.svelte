@@ -72,7 +72,6 @@
 			<h2>Evidence</h2>
 			{#each {length: 3} as _, i}
 				<div class="evidence">
-					<!-- svelte-ignore a11y-missing-attribute -->
 					<img src={evidence[cats[catIndex].evidence[i]].image} style="order:{(i + catIndex) % 2};rotate:{rotateImages[i]}deg;"/>
 					<div class="text">
 						<h3>{evidence[cats[catIndex].evidence[i]].name}</h3>
