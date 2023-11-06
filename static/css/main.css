@@ -42,7 +42,7 @@ p {
 }
 
 .hero>p {
-    text-transform: lowercase;
+    text-transform: uppercase;
     font-family: 'Heebo', sans-serif;
     font-size: 50px;
     letter-spacing: -1px;
@@ -50,6 +50,12 @@ p {
     position: relative;
     text-align: center;
     top: -8vh;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 i {
@@ -93,10 +99,6 @@ header {
     font-size: 6.66vw;
     font-family: October-Crow;
     font-weight: lighter;
-}
-
-.title::after {
-    content: "PHASMEOWPHOBIA";
 }
 
 .headerRight {

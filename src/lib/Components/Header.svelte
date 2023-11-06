@@ -1,12 +1,12 @@
 <header>
     <div class="headerWrap">
         <div class="headerLeft">
-            <a href='/'>
+            <a>
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
         <div class="headerCenter">
-            <div class="title"></div>
+            <div class="title"><a href="/">Phasmeowphobia</a></div>
         </div>
         <div class="headerRight">
             <a href="/guide">guide</a>
