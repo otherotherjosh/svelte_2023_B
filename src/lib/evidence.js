@@ -14,7 +14,9 @@ export const evidence = [
     },
     {	name: 'EMF Level 5',
         description:
-        "Electro Magnetic Fluffiness Level 5",
+        "Due to their fur, cats generate static charge when they interact with most household objects. " +
+        "You can measure the EMF (Electro Magnetic Fluffiness) level of the charge left on the object " +
+        "by using the EMF reader. This cat is one of the few that will leave an EMF level of 5.",
         image: "../img/evidence_emf.png"
     },
     {	name: 'Cat Orb',
@@ -37,7 +39,8 @@ export const evidence = [
     },
     {	name: 'Litter Box',
         description:
-        "hearing meows from the litter box",
+        "The Litter Box is an AM/FM radio receiver that specializes in frequencies found to be often used by cats to communicate. " +
+        "Included in the wiring is an interpreter to approximately translate the responses you receive from this cat when it's nearby.",
         image: "../img/evidence_litterbox.png"
     }
 ];
