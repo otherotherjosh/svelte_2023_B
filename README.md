@@ -1,9 +1,18 @@
 # Phasmeowphobia
 A website about the popular ~~ghost~~ cat hunting game
-
-## About
+![Screenshot of Home Page](docs/screenshot-home.jpg)
 I decided to make a fun website about a fun game I enjoy. Unfortunately, I did not find a relevant API to hook into, or at least not one that I liked.
 To remedy this, I replaced all instances of ghosts in the game with cats! There. All better.
+![Screenshot of Guide Page](docs/screenshot-guide.jpg)
+
+## Roadmap
+- Create dropdown menu from burger on left of header
+- Create shop page where user can browse through detective equipment
+- Create interactive simulations for equipment
+- Create footer content
+- Add descriptions more related to gameplay behaviour for each cat in the journal
+- Replace guide page background with video
+- Add more content below hero on home page
 
 ## Inspiration Sites
 
