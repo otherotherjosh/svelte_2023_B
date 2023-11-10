@@ -1,6 +1,10 @@
 # Phasmeowphobia
 A website about the popular ~~ghost~~ cat hunting game
 
+## About
+I decided to make a fun website about a fun game I enjoy. Unfortunately, I did not find a relevant API to hook into, or at least not one that I liked.
+To remedy this, I replaced all instances of ghosts in the game with cats! There. All better.
+
 ## Inspiration Sites
 
 ### Kinetic Games
