@@ -2,6 +2,8 @@
 A website about the popular ~~ghost~~ cat hunting game
 
 ## Inspiration Sites
+
+### Kinetic Games
 <a href="https://www.kineticgames.co.uk/">![Kinetic Games](./docs/inspiration-kineticgames.JPG)</a>
 _Official website of the people behind the original game_
 
@@ -13,14 +15,19 @@ I am going to steal this concept.
 
 I also like the hero section. Something about having an image (or video) take up most of the viewport really satisfies me.
 
+### NASA
 <a href="https://www.nasa.gov/">![NASA](./docs/inspiration-nasa.JPG)</a>
 _Website of NASA_
 
+I picked NASA when Elise (I think I'm not misattributing this to her but I'm not entirely certain) suggested we check it out as inspiration for our Space Traders project.
+Then I noticed the hero sections galore and immediately tossed the link in here.
+
 Their hero sections are wider than the aforementioned Kinetic Games Website. Some say _cinematic_, but I still prefer the IMAX-esque style of hero sections that fill more of the screen)
 
+### Spiritbox
 <a href="https://www.spiritbox.com/">![Spiritbox](./docs/inspiration-spiritbox.JPG)</a>
 _Website of the band Spiritbox_
 
 I picked their site because I ran out of ideas for places to look. Spiritbox happens to share the name of an item in the game, so if I _really_ have to thematically link it to my website, that's how.
 
-It's fairly simple by design but I enjoy the level of whitespace and the absolute refusal to stray away from the purple color scheme.
+It's fairly simple by design but I enjoy the level of whitespace and the absolute refusal to stray away from the monochromatic color scheme.
